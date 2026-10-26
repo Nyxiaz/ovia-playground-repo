@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-light: #eef2ff;
+    --secondary: #0284c7;
+    --accent: #7c3aed;
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --bg-main: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Accessibility focus ring */
+  *:focus-visible {
+    outline: 3px solid #6366f1;
+    outline-offset: 2px;
+  }
+}
+
+/* Accessible high-contrast and font sizing support */
+.accessible-large-text {
+  font-size: 1.15rem !important;
+}
+
+.accessible-high-contrast {
+  filter: contrast(125%);
+}
